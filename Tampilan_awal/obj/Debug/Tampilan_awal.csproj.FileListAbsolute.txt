@@ -1,0 +1,16 @@
+c:\users\rizbell\documents\visual studio 2015\Projects\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe.config
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.pdb
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csprojResolveAssemblyReference.cache
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.g.cs
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\App.g.cs
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.cache
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.lref
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.baml
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.g.resources
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.Properties.Resources.resources
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csproj.GenerateResource.Cache
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.exe
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.pdb
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.g.cs
+C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.baml

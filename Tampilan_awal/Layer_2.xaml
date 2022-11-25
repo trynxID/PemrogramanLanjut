@@ -1,0 +1,92 @@
+﻿<Window x:Class="Tampilan_awal.Layer_2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tampilan_awal"
+        mc:Ignorable="d"
+        Title="Layer_2" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="70"/>
+        </Grid.ColumnDefinitions>
+        <Button Height="100" Grid.Row="1" Grid.Column="1" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Taro.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="1" Grid.Column="2" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/oreo.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="1" Grid.Column="3" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Latte.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="1" Grid.Column="4" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Brown.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="1" Grid.Column="5" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Cookies.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="1" Grid.Column="6" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Matcha.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="1" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/coco.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="2" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Brown_Milk.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="3" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/strawberry.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="4" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/velvet.jpg"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="5" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Manggo.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="100" Grid.Row="3" Grid.Column="6" BorderThickness="2" BorderBrush="OrangeRed">
+            <Button.Background>
+                <ImageBrush ImageSource="Asset/Orange.jpg" Stretch="Fill"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="back" Content="Back" Grid.Column="1" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" BorderThickness="2" BorderBrush="OrangeRed" Foreground="OrangeRed" FontFamily="arial" FontSize="24" Background="White"/>
+        <Button x:Name="next" Content="Next" Grid.Column="3" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" BorderThickness="2" BorderBrush="OrangeRed" Foreground="White" FontFamily="arial" FontSize="24" Background="OrangeRed"/>
+        <Rectangle Fill="Orange" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" Grid.Column="5" RadiusY="22" RadiusX="22"  />
+    </Grid>
+</Window>
