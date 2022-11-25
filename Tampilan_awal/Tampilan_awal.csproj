@@ -127,6 +127,27 @@
   <ItemGroup>
     <Resource Include="Asset\coco.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AssetFrame\AvocadoChoco.png" />
+    <Resource Include="AssetFrame\BlackTea.png" />
+    <Resource Include="AssetFrame\Brownsugar.png" />
+    <Resource Include="AssetFrame\BrownSugarTea.png" />
+    <Resource Include="AssetFrame\Cappucino.png" />
+    <Resource Include="AssetFrame\ChocoMint.png" />
+    <Resource Include="AssetFrame\Cookies.png" />
+    <Resource Include="AssetFrame\GreenAppleTea.png" />
+    <Resource Include="AssetFrame\KopiGulaAren.png" />
+    <Resource Include="AssetFrame\LycheeTea.png" />
+    <Resource Include="AssetFrame\MangoCreamy.png" />
+    <Resource Include="AssetFrame\Matcha.png" />
+    <Resource Include="AssetFrame\OrangCreamy.png" />
+    <Resource Include="AssetFrame\OrangeCreamy.png" />
+    <Resource Include="AssetFrame\Ovaltine.png" />
+    <Resource Include="AssetFrame\RedVelvet.png" />
+    <Resource Include="AssetFrame\StrawberryCreamy.png" />
+    <Resource Include="AssetFrame\Taro.png" />
+    <Resource Include="AssetFrame\ThaiTea.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

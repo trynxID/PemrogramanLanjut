@@ -14,3 +14,35 @@ C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_aw
 C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.pdb
 C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.g.cs
 C:\Users\Rizbell\Documents\Visual Studio 2015\Projects\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.baml
+F:\Downloads\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe.config
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.exe
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.pdb
+F:\Downloads\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe
+F:\Downloads\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.pdb
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csprojResolveAssemblyReference.cache
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.g.cs
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.g.cs
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\App.g.cs
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.cache
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.lref
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.baml
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.baml
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.g.resources
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.Properties.Resources.resources
+F:\Downloads\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csproj.GenerateResource.Cache
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe.config
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.exe
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.pdb
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.exe
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\bin\Debug\Tampilan_awal.pdb
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csprojResolveAssemblyReference.cache
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.g.cs
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.g.cs
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\App.g.cs
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.cache
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal_MarkupCompile.lref
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_2.baml
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.baml
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.g.resources
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.Properties.Resources.resources
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csproj.GenerateResource.Cache

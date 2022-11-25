@@ -5,88 +5,277 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tampilan_awal"
         mc:Ignorable="d"
-        Title="Layer_2" Height="600" Width="800">
+
+        Title="Menu" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonRounded" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="0,0,24,0">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonOval" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="29" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="0,0,48,0">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="0" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Width="19"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="53*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="70"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="110"/>
-            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="54*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
-        <Button Height="100" Grid.Row="1" Grid.Column="1" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Taro.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="1" Grid.Column="2" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/oreo.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="1" Grid.Column="3" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Latte.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="1" Grid.Column="4" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Brown.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="1" Grid.Column="5" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Cookies.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="1" Grid.Column="6" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Matcha.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="1" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/coco.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="2" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Brown_Milk.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="3" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/strawberry.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="4" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/velvet.jpg"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="5" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Manggo.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button Height="100" Grid.Row="3" Grid.Column="6" BorderThickness="2" BorderBrush="OrangeRed">
-            <Button.Background>
-                <ImageBrush ImageSource="Asset/Orange.jpg" Stretch="Fill"></ImageBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="back" Content="Back" Grid.Column="1" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" BorderThickness="2" BorderBrush="OrangeRed" Foreground="OrangeRed" FontFamily="arial" FontSize="24" Background="White"/>
-        <Button x:Name="next" Content="Next" Grid.Column="3" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" BorderThickness="2" BorderBrush="OrangeRed" Foreground="White" FontFamily="arial" FontSize="24" Background="OrangeRed"/>
-        <Rectangle Fill="Orange" HorizontalAlignment="Center" Margin="0,23,0,0" Grid.Row="5" Width="110" Height="35" VerticalAlignment="Top" Grid.Column="5" RadiusY="22" RadiusX="22"  />
+        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="5" ScrollViewer.VerticalScrollBarVisibility="Visible">
+            <ItemsControl>
+                <TextBlock x:Name="MilkBase" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Milk Base" VerticalAlignment="Top" FontFamily="Mulish" FontSize="28" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.Column="1" Height="35" Width="145" Grid.ColumnSpan="2"/>
+                <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="9" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"  ScrollViewer.CanContentScroll="True" FlowDirection="LeftToRight" Grid.RowSpan="2" Margin="0,0,0,2" >
+                    <StackPanel Orientation="Horizontal" >
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="0,0,0,0" Height="175" Width="125" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Taro.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="3" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Brownsugar.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Height="175" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="5" Grid.Row="1">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Cookies.png" Stretch="UniformToFill"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" Width="125" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="7" Grid.Row="1" Margin="20,0,0,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Matcha.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="9" Grid.Row="1" Margin="20,0,0,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/ChocoMint.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="9" Grid.Row="1" Margin="20,0,0,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/RedVelvet.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="9" Grid.Row="1" Margin="20,0,0,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Ovaltine.png"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="9" Grid.Row="1" Margin="20,0,0,0">
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/AvocadoChoco.png"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock x:Name="MilkTea" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Milk Tea" VerticalAlignment="Top" FontFamily="Mulish" FontSize="28" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.Column="1" Height="35" Width="145" Grid.ColumnSpan="2" Grid.Row="3" Margin="0,3,0,0"/>
+                <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="9">
+                    <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="0,0,0,-129" Height="175" Width="125" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" VerticalAlignment="Top" Padding="0" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="AssetFrame/BrownSugarTea.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Grid.Row="4" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="AssetFrame/MangoCreamy.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Height="175" VerticalAlignment="Top" HorizontalAlignment="Left" Width="125" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="5" Grid.Row="4">
+                        <Button.Background>
+                            <ImageBrush ImageSource="AssetFrame/StrawberryCreamy.png" Stretch="UniformToFill"/>
+                        </Button.Background>
+                    </Button>
+                    <Button BorderThickness="0" BorderBrush="OrangeRed" Height="175" Width="125" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" Grid.Column="7" Grid.Row="4" Margin="20,0,0,0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="AssetFrame/OrangeCreamy.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+                <TextBlock x:Name="TeaCoffee" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Tea &amp; Coffee" VerticalAlignment="Top" FontFamily="Mulish" FontSize="28" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.Column="1" Height="35" Width="181" Grid.ColumnSpan="3" Grid.Row="6" Margin="0,3,0,0"/>
+                <ScrollViewer Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="9" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"  ScrollViewer.CanContentScroll="True" FlowDirection="LeftToRight" Grid.RowSpan="2" Margin="0,0,0,2" >
+                    <StackPanel Orientation="Horizontal">
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="0,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/BlackTea.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/GreenAppleTea.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="5" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/LycheeTea.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="7" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/Cappucino.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="9" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/KopiGulaAren.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                        <Button BorderThickness="0" BorderBrush="OrangeRed" Margin="20,0,0,0" Width="125" Height="175" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" MaxWidth="125" MaxHeight="175" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="11" Grid.Row="7" >
+                            <Button.Background>
+                                <ImageBrush ImageSource="AssetFrame/ThaiTea.png" Stretch="Uniform"/>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+            </ItemsControl>
+        </ScrollViewer>
+        <Button x:Name="Back" Content="Back" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="White" Foreground="#FFFF5E1A" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="8,0,3,0" Grid.ColumnSpan="2" />
+        <Button x:Name="Next" Content="Next" Grid.Column="5" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="10,0,0,0" Grid.ColumnSpan="2" />
+        <Label x:Name="label" Content="Brown Sugar Boba Milk Tea" Grid.Column="7" HorizontalAlignment="Left" Margin="18,0,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="3" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
+        <StackPanel Grid.Column="7" Margin="18,33,16,91"  Grid.Row="1" Grid.ColumnSpan="3" Background="#FFF39425" >
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Premium Milk Tea" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White" RenderTransformOrigin="0.485,2.1"/>
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Tea Import Quality And Delicious Boba" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White"/>
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Large Cup" HorizontalAlignment="Left" Width="169" FontWeight="DemiBold" Foreground="White"/>
+        </StackPanel>
+        <Label x:Name="label_Copy" Content="Topping" Grid.Column="7" HorizontalAlignment="Left" Margin="18,90,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,121,16,15" Grid.Row="1" Height="39" FontFamily="Mulish" FontWeight="Bold">
+            <StackPanel Orientation="Horizontal" Height="20" Background="Black">
+                <Button x:Name="NoneTopping" Content="None" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="EggPudding" Content="Egg Pudding" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="BobaPearl" Content="Boba Pearl" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="OatMeal" Content="Oat Meal" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="Regal" Content="Regal" Grid.Column="11" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="CheeseFoam" Content="Cheese Foam" Grid.Column="11" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Label x:Name="SugarLevel" Content="Sugar Level" Grid.Column="7" HorizontalAlignment="Left" Margin="20,160,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.RowSpan="2"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,1,16,0" Grid.Row="3" Height="39" FontFamily="Mulish" FontWeight="Bold">
+            <StackPanel Orientation="Horizontal" Height="20" Background="Black">
+                <Button x:Name="NoSugar" Content="No Sugar" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="LessSugar" Content="Less Sugar" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="NormalSugar" Content="Normal" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="ExtraSugar" Content="Extra Sugar" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Label x:Name="IceLevel" Content="Ice Level" Grid.Column="7" HorizontalAlignment="Left" Margin="18,10,0,0" Grid.Row="4" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,46,16,90" Grid.Row="4" Height="39" FontFamily="Mulish" FontWeight="Bold">
+            <StackPanel Orientation="Horizontal" Height="20" Background="Black">
+                <Button x:Name="NoIce" Content="No Ice" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="LessIce" Content="Less Ice" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="NormalIce" Content="Normal" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+                <Button x:Name="ExtraIce" Content="Extra Ice" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727"/>
+            </StackPanel>
+        </ScrollViewer>
+        <Button x:Name="AddOrder" Content="Add To Order" Grid.Column="7" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="196" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="39,0,35,0" Grid.ColumnSpan="3" />
+
+        <Button x:Name="Tambah" Content=" +" BorderThickness="2" Grid.Column="9" Margin="35,122,10,21" Grid.Row="4" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A"/>
+        <Button x:Name="Kurang" Content=" -" BorderThickness="2" Grid.Column="7" Margin="55,122,10,21" Grid.Row="4" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" Grid.ColumnSpan="2"/>
+        <Label x:Name="Order" BorderThickness="2" Content="1" Grid.Column="7" HorizontalAlignment="Center" Margin="105,122,105,21" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="32" Width="60" FontFamily="Mulish" FontSize="20" FontWeight="Bold" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+
     </Grid>
 </Window>

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Tampilan_awal"
         mc:Ignorable="d"
         Title="Tampilan Menu" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+        
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -64,10 +65,10 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="63" Margin="10,10,0,0" VerticalAlignment="Top" Width="209" Source="Asset/Logo.png"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="63" Margin="55,10,0,0" VerticalAlignment="Top" Width="209" Source="Asset/Logo.png"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Height="186" Margin="55,78,0,0" VerticalAlignment="Top" Width="673" Source="Asset/Banner.png"/>
         <Button x:Name="Name" Content="Order here" HorizontalAlignment="Left" Margin="324,294,0,0" VerticalAlignment="Top" Width="139" Height="45"
-                Background="OrangeRed" Foreground="White" FontFamily="arial" FontSize="20" Style="{DynamicResource TombolOrder}" Click="Name_Click"/>
+                Background="#FFFF5E1A" Foreground="White" FontFamily="Mulish" FontSize="20"  Style="{DynamicResource TombolOrder}" Click="Name_Click" FontWeight="Bold"/>
         <Image x:Name="image2" HorizontalAlignment="Left" Height="183" Margin="55,360,0,0" VerticalAlignment="Top" Width="673" Source="Asset/Menu fav.png"/>
 
     </Grid>
