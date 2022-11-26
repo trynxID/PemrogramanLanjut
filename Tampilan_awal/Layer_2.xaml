@@ -103,11 +103,18 @@
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="175*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="89*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="15*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="40*"/>
-            <RowDefinition Height="175*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="21*"/>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="40*"/>
             <RowDefinition Height="53*"/>
@@ -126,7 +133,7 @@
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="14*"/>
         </Grid.ColumnDefinitions>
-        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="5" ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="12" ScrollViewer.VerticalScrollBarVisibility="Visible">
             <ItemsControl>
                 <TextBlock x:Name="MilkBase" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Text="Milk Base" VerticalAlignment="Top" FontFamily="Mulish" FontSize="28" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.Column="1" Height="35" Width="145" Grid.ColumnSpan="2"/>
                 <ScrollViewer Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="9" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled"  ScrollViewer.CanContentScroll="True" FlowDirection="LeftToRight" Grid.RowSpan="2" Margin="0,0,0,2" >
@@ -233,16 +240,16 @@
                 </ScrollViewer>
             </ItemsControl>
         </ScrollViewer>
-        <Button x:Name="Back" Content="Back" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="White" Foreground="#FFFF5E1A" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="8,0,3,0" Grid.ColumnSpan="2" Click="Back_Click" />
-        <Button x:Name="Next" Content="Next" Grid.Column="5" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="10,0,0,0" Grid.ColumnSpan="2" Click="Next_Click" />
-        <Label x:Name="label" Content="Brown Sugar Boba Milk Tea" Grid.Column="7" HorizontalAlignment="Left" Margin="18,0,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="3" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
-        <StackPanel Grid.Column="7" Margin="18,33,16,91"  Grid.Row="1" Grid.ColumnSpan="3" Background="#FFF39425" >
-            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Premium Milk Tea" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White" RenderTransformOrigin="0.485,2.1"/>
-            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Tea Import Quality And Delicious Boba" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White"/>
-            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Large Cup" HorizontalAlignment="Left" Width="169" FontWeight="DemiBold" Foreground="White"/>
+        <Button x:Name="Back" Content="Back" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="13" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="White" Foreground="#FFFF5E1A" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="8,0,3,0" Grid.ColumnSpan="2" Click="Back_Click" />
+        <Button x:Name="Next" Content="Next" Grid.Column="5" HorizontalAlignment="Center" Grid.Row="13" VerticalAlignment="Top" Width="134" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="10,0,0,0" Grid.ColumnSpan="2" Click="Next_Click" />
+        <Label x:Name="label" Content="Brown Sugar Boba Milk Tea" Grid.Column="7" HorizontalAlignment="Left" Margin="18,0,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="3" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Height="31" Width="236"/>
+        <StackPanel Grid.Column="7" Margin="18,31,16,32"  Grid.Row="2" Grid.ColumnSpan="3" Background="#FFF39425" Grid.RowSpan="2" Height="60" >
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Premium Milk Tea" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White" RenderTransformOrigin="0.485,2.1" Height="20" VerticalAlignment="Center"/>
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Tea Import Quality And Delicious Boba" HorizontalAlignment="Left" Width="236" FontWeight="DemiBold" Foreground="White" Height="20" VerticalAlignment="Center"/>
+            <TextBlock FontFamily="Mulish" FontSize="12" Text="- Large Cup" HorizontalAlignment="Left" Width="169" FontWeight="DemiBold" Foreground="White" Height="20"/>
         </StackPanel>
-        <Label x:Name="label_Copy" Content="Topping" Grid.Column="7" HorizontalAlignment="Left" Margin="18,90,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
-        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,121,16,15" Grid.Row="1" Height="39" FontFamily="Mulish" FontWeight="Bold">
+        <Label x:Name="label_Copy" Content="Topping" Grid.Column="7" HorizontalAlignment="Left" Margin="18,1,0,0" Grid.Row="3" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Height="31" Width="76"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,32,16,0" Grid.Row="3" FontFamily="Mulish" FontWeight="Bold" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal" Height="20" Background="Black">
                 <Button x:Name="NoneTopping" ClickMode="Press" Content="None" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="NoneTopping_Click"/>
                 <Button x:Name="EggPudding" ClickMode="Release" Content="Egg Pudding" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="EggPudding_Click"/>
@@ -252,8 +259,8 @@
                 <Button x:Name="CheeseFoam" ClickMode="Release" Content="Cheese Foam" Grid.Column="11" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="CheeseFoam_Click"/>
             </StackPanel>
         </ScrollViewer>
-        <Label x:Name="SugarLevel" Content="Sugar Level" Grid.Column="7" HorizontalAlignment="Left" Margin="20,160,0,0" Grid.Row="1" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.RowSpan="2"/>
-        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,1,16,0" Grid.Row="3" Height="39" FontFamily="Mulish" FontWeight="Bold">
+        <Label x:Name="SugarLevel" Content="Sugar Level" Grid.Column="7" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="5" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Grid.RowSpan="2" Height="31" Width="105"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,1,16,0" Grid.Row="7" FontFamily="Mulish" FontWeight="Bold">
             <StackPanel Orientation="Horizontal" Height="20" Background="Black">
                 <Button x:Name="NoSugar" Content="No Sugar" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="NoSugar_Click"/>
                 <Button x:Name="LessSugar" Content="Less Sugar" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="LessSugar_Click"/>
@@ -261,8 +268,8 @@
                 <Button x:Name="ExtraSugar" Content="Extra Sugar" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="ExtraSugar_Click"/>
             </StackPanel>
         </ScrollViewer>
-        <Label x:Name="IceLevel" Content="Ice Level" Grid.Column="7" HorizontalAlignment="Left" Margin="18,10,0,0" Grid.Row="4" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A"/>
-        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,46,16,90" Grid.Row="4" Height="39" FontFamily="Mulish" FontWeight="Bold">
+        <Label x:Name="IceLevel" Content="Ice Level" Grid.Column="7" HorizontalAlignment="Left" Margin="18,0,0,0" Grid.Row="8" VerticalAlignment="Top" FontFamily="Mulish" FontSize="17" FontWeight="Bold" Foreground="#FFFF5E1A" Height="31" Width="79"/>
+        <ScrollViewer Grid.Column="7" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="18,0,16,46" Grid.Row="9" FontFamily="Mulish" FontWeight="Bold">
             <StackPanel Orientation="Horizontal" Height="20" Background="Black">
                 <Button x:Name="NoIce" Content="No Ice" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Bottom" Height="20" Width="70" FontFamily="Mulish" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="NoIce_Click"/>
                 <Button x:Name="LessIce" Content="Less Ice" Grid.Column="7" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="LessIce_Click"/>
@@ -270,11 +277,11 @@
                 <Button x:Name="ExtraIce" Content="Extra Ice" Grid.Column="9" HorizontalAlignment="Left" Margin="0" Grid.Row="1" VerticalAlignment="Top" Height="20" Width="70" FontFamily="Mulish" Grid.ColumnSpan="3" FontSize="10" Background="#FFFFDCC9" Foreground="#FFFF5E1A" BorderBrush="#FF292727" Click="ExtraIce_Click"/>
             </StackPanel>
         </ScrollViewer>
-        <Button x:Name="AddOrder" Content="Add To Order" Grid.Column="7" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Top" Width="196" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="39,0,35,0" Grid.ColumnSpan="3" Click="AddOrder_Click" />
+        <Button x:Name="AddOrder" Content="Add To Order" Grid.Column="7" HorizontalAlignment="Center" Grid.Row="13" VerticalAlignment="Top" Width="196" FontFamily="Mulish" FontWeight="Bold" FontSize="20" Height="40" Background="#FFFF5E1A" Foreground="White" BorderThickness="3" BorderBrush="#FFFF5E1A" Style="{DynamicResource ButtonRounded}" Margin="39,0,35,0" Grid.ColumnSpan="3" Click="AddOrder_Click" />
 
-        <Button x:Name="Tambah" Content=" +" BorderThickness="2" Grid.Column="9" Margin="35,122,10,21" Grid.Row="4" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" Click="Tambah_Click"/>
-        <Button x:Name="Kurang" Content=" -" BorderThickness="2" Grid.Column="7" Margin="55,122,10,21" Grid.Row="4" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" Grid.ColumnSpan="2" Click="Kurang_Click"/>
-        <Label x:Name="Order" BorderThickness="2" Content="1" Grid.Column="7" HorizontalAlignment="Center" Margin="105,122,105,21" Grid.Row="4" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="32" Width="60" FontFamily="Mulish" FontSize="20" FontWeight="Bold" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Button x:Name="Tambah" Content=" +" BorderThickness="2" Grid.Column="9" Margin="35,1,10,0" Grid.Row="10" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" Click="Tambah_Click"/>
+        <Button x:Name="Kurang" Content=" -" BorderThickness="2" Grid.Column="7" Margin="55,1,10,0" Grid.Row="10" FontFamily="Mulish" FontSize="18" Background="{x:Null}" Style="{DynamicResource ButtonOval}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="32" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" Grid.ColumnSpan="2" Click="Kurang_Click"/>
+        <Label x:Name="Order" BorderThickness="2" Content="1" Grid.Column="7" HorizontalAlignment="Center" Margin="105,1,105,0" Grid.Row="10" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="32" Width="60" FontFamily="Mulish" FontSize="20" FontWeight="Bold" BorderBrush="#FFFF5E1A" Foreground="#FFFF5E1A" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
 
     </Grid>
