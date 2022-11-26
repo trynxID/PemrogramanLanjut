@@ -78,8 +78,8 @@
         <RadioButton Content="E - Money" HorizontalAlignment="Left" Height="20" Margin="490,220,0,0" VerticalAlignment="Top" Width="88" Checked="RadioButton_Checked" FontWeight="Bold" AutomationProperties.IsColumnHeader="True" FontFamily="Mulish"/>
         <Label Content="Order List" HorizontalAlignment="Left" Height="41" Margin="44,10,0,0" VerticalAlignment="Top" Width="211" FontSize="22" FontFamily="Mulish" FontWeight="Bold"/>
         <Label Content="Voucher" HorizontalAlignment="Left" Margin="43,446,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" FontFamily="Mulish"/>
-        <Button x:Name="Name" Content="Buy Now!" HorizontalAlignment="Left" Margin="644,354,0,0" VerticalAlignment="Top" Width="104" Height="35"
-                Background="#FFFF5E1A" Foreground="White" FontFamily="Mulish" FontSize="20" Style="{DynamicResource ButtonRounded}" Click="Name_Click" FontWeight="Bold" BorderBrush="{x:Null}"/>
+        <Button x:Name="BuyNow" Content="Buy Now!" HorizontalAlignment="Left" Margin="644,354,0,0" VerticalAlignment="Top" Width="104" Height="35"
+                Background="#FFFF5E1A" Foreground="White" FontFamily="Mulish" FontSize="20" Style="{DynamicResource ButtonRounded}" Click="BuyNow_Click" FontWeight="Bold" BorderBrush="{x:Null}"/>
         <Label Content="Grand Opening &#xA;       Voucher" HorizontalAlignment="Left" Margin="103.333,481,0,0" VerticalAlignment="Top" FontFamily="Montserrat" Height="42" Width="109" HorizontalContentAlignment="Center" UseLayoutRounding="False"/>
         <Label Content="Payment Method" HorizontalAlignment="Left" Height="32" Margin="559,163,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.955,0.094" FontFamily="Montserrat" FontWeight="Bold"/>
         <Button Content="1x" HorizontalAlignment="Left" Height="24" Margin="164,80,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Background="#FFEFEFEF" BorderBrush="#FFEFEFEF" RenderTransformOrigin="0.107,0.792" FontFamily="Mulish" FontWeight="Bold"/>
@@ -96,8 +96,8 @@
         <Image HorizontalAlignment="Left" Height="85" Margin="38,247,0,0" VerticalAlignment="Top" Width="114" Source="Asset/Brown_Milk.jpg" Stretch="UniformToFill"/>
         <Button x:Name="Name_Copy" Content="Back" HorizontalAlignment="Left" Margin="490,354,0,0" VerticalAlignment="Top" Width="104" Height="35" BorderThickness="2" FontWeight="Bold"
             Background="White" Foreground="#FFFF5E1A" FontFamily="Mulish" FontSize="20"  Style="{DynamicResource ButtonRounded}" Click="Back_Click" BorderBrush="#FFFF5E1A"/>
-        <Button x:Name="Name_Copy1" Content="  Apply &#xD;&#xA;Voucher" HorizontalAlignment="Left" Margin="236,491,0,0" VerticalAlignment="Top" Width="47" Height="24"
-            Background="#FF28C700" Foreground="White" FontFamily="arial" FontSize="8" Style="{DynamicResource ButtonRounded}" Click="Name_Click" FontWeight="Bold" BorderBrush="#FF28C700"/>
+        <Button x:Name="ApplyVoc" Content="  Apply &#xD;&#xA;Voucher" HorizontalAlignment="Left" Margin="236,491,0,0" VerticalAlignment="Top" Width="47" Height="24"
+            Background="#FF28C700" Foreground="White" FontFamily="arial" FontSize="8" Style="{DynamicResource ButtonRounded}" Click="ApplyVoc_Click" FontWeight="Bold" BorderBrush="#FF28C700"/>
         <Label Content="Topping: -&#xD;&#xA;Sugar level: Normal&#xD;&#xA;Ice level: Extra" HorizontalAlignment="Left" Margin="198,72,0,0" VerticalAlignment="Top" Width="179" FontSize="8" FontFamily="Mulish"/>
         <Label Content="Cookies dan Cream Boba Milk" HorizontalAlignment="Left" Margin="198,51,0,0" VerticalAlignment="Top" Height="21" Width="179" FontWeight="Bold" FontFamily="Mulish" FontSize="11"/>
         <Label Content="Rp 13.000" HorizontalAlignment="Left" Margin="198,114,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.531,1.609" Foreground="#FFFF5E1A" FontWeight="Bold" FontFamily="Mulish" FontSize="10"/>

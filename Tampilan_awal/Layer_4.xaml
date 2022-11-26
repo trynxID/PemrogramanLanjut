@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tampilan_awal.Layer_4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tampilan_awal"
+        mc:Ignorable="d"
+        Title="Greetings" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="179*"/>
+            <ColumnDefinition Width="444*"/>
+            <ColumnDefinition Width="169*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="302*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="24*"/>
+            <RowDefinition Height="211*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Center" Margin="162,208,21,0" VerticalAlignment="Center" Width="440" Source="Asset/Logo.png" Height="94" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="8,0,24,0" TextAlignment="Center" Text="Terimakasih Atas Kunjungan Anda" VerticalAlignment="Center" Width="412" FontFamily="Mulish" FontSize="24" FontWeight="Bold" Foreground="#FFFF7A00" Height="32" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Center" Margin="130,0,142,0" TextAlignment="Center" Text="Silahkan Tunggu" VerticalAlignment="Center" FontFamily="Mulish" FontSize="20" FontWeight="Bold" Foreground="#FFFFB525" Grid.Row="2" Height="24" Width="172" Grid.Column="1"/>
+
+    </Grid>
+</Window>

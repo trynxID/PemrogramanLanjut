@@ -38,11 +38,6 @@ namespace Tampilan_awal
 
         }
 
-        private void Name_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -58,6 +53,18 @@ namespace Tampilan_awal
             Layer_2 objLayer_2 = new Layer_2();
             this.Visibility = Visibility.Hidden;
             objLayer_2.Show();
+        }
+
+        private void BuyNow_Click(object sender, RoutedEventArgs e)
+        {
+            Layer_4 objLayer_4 = new Layer_4();
+            this.Visibility = Visibility.Hidden;
+            objLayer_4.Show();
+        }
+
+        private void ApplyVoc_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
