@@ -46,3 +46,5 @@ D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\MainWindow.baml
 D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.g.resources
 D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.Properties.Resources.resources
 D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Tampilan_awal.csproj.GenerateResource.Cache
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_3.g.cs
+D:\Kuliah C#\Tampilan_awal\Tampilan_awal\obj\Debug\Layer_3.baml

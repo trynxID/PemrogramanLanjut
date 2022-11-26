@@ -1,0 +1,126 @@
+﻿<Window x:Class="Tampilan_awal.Layer_3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tampilan_awal"
+        mc:Ignorable="d"
+        Title="Payment" Height="600" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonRounded" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" Margin="-24,0,0,0">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border CornerRadius="10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="75" Margin="474,59,0,0" VerticalAlignment="Top" Width="276">
+            <Label Content="Sub Total&#xA;&#xA;" Margin="9,4,155,45" FontFamily="Mulish" Width="109.8"/>
+        </Border>
+        <Border CornerRadius="0,0,10,10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="474,108,0,0" VerticalAlignment="Top" Width="276">
+            <Label Content="Total" Margin="9,-1,65,1" FontFamily="Mulish"/>
+        </Border>
+        <Border CornerRadius="10" BorderBrush="Black" BorderThickness="0" HorizontalAlignment="Left" Height="44" Margin="36,481,0,0" VerticalAlignment="Top" Width="254" Background="#FFFFEE53">
+            <Image HorizontalAlignment="Left" Height="27" Margin="8,6,0,0" VerticalAlignment="Top" Width="52" Source="Asset/Vector.png"/>
+        </Border>
+        <Border CornerRadius="10" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="166" Margin="474,155,0,0" VerticalAlignment="Top" Width="276"/>
+        <RadioButton Content="Cash" HorizontalAlignment="Left" Height="20" Margin="490,200,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold" FontFamily="Mulish"/>
+        <RadioButton Content="E - Money" HorizontalAlignment="Left" Height="20" Margin="490,220,0,0" VerticalAlignment="Top" Width="88" Checked="RadioButton_Checked" FontWeight="Bold" AutomationProperties.IsColumnHeader="True" FontFamily="Mulish"/>
+        <Label Content="Order List" HorizontalAlignment="Left" Height="41" Margin="44,10,0,0" VerticalAlignment="Top" Width="211" FontSize="22" FontFamily="Mulish" FontWeight="Bold"/>
+        <Label Content="Voucher" HorizontalAlignment="Left" Margin="43,446,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" FontFamily="Mulish"/>
+        <Button x:Name="Name" Content="Buy Now!" HorizontalAlignment="Left" Margin="644,354,0,0" VerticalAlignment="Top" Width="104" Height="35"
+                Background="#FFFF5E1A" Foreground="White" FontFamily="Mulish" FontSize="20" Style="{DynamicResource ButtonRounded}" Click="Name_Click" FontWeight="Bold" BorderBrush="{x:Null}"/>
+        <Label Content="Grand Opening &#xA;       Voucher" HorizontalAlignment="Left" Margin="103.333,481,0,0" VerticalAlignment="Top" FontFamily="Montserrat" Height="42" Width="109" HorizontalContentAlignment="Center" UseLayoutRounding="False"/>
+        <Label Content="Payment Method" HorizontalAlignment="Left" Height="32" Margin="559,163,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.955,0.094" FontFamily="Montserrat" FontWeight="Bold"/>
+        <Button Content="1x" HorizontalAlignment="Left" Height="24" Margin="164,80,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Background="#FFEFEFEF" BorderBrush="#FFEFEFEF" RenderTransformOrigin="0.107,0.792" FontFamily="Mulish" FontWeight="Bold"/>
+        <Button Content="2x" HorizontalAlignment="Left" Height="24" Margin="164,180,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Background="#FFEFEFEF" BorderBrush="#FFEFEFEF" FontWeight="Bold" FontFamily="Mulish"/>
+        <Button Content="1x" HorizontalAlignment="Left" Height="24" Margin="164,283,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Background="#FFEFEFEF" BorderBrush="#FFEFEFEF" RenderTransformOrigin="1.607,0.292" FontWeight="Bold" FontFamily="Mulish"/>
+        <Button Content="1x" HorizontalAlignment="Left" Height="24" Margin="164,381,0,0" VerticalAlignment="Top" Width="28" Click="Button_Click_1" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Background="#FFEFEFEF" BorderBrush="#FFEFEFEF" FontWeight="Bold" FontFamily="Mulish"/>
+        <Label Content="Rp. 75.000.00" HorizontalAlignment="Left" Margin="682,67,0,0" VerticalAlignment="Top" Height="22" Width="66" FontSize="8" FontFamily="Mulish"/>
+        <Label Content="Rp. 7.500.00" HorizontalAlignment="Left" Margin="687,82,0,0" VerticalAlignment="Top" Height="22" Width="63" FontSize="8" FontFamily="Mulish"/>
+        <Label Content="Rp. 67.500.00" HorizontalAlignment="Left" Margin="682,111,0,0" VerticalAlignment="Top" Height="22" Width="66" FontSize="8" FontFamily="Mulish"/>
+        <Label Content="Discount" HorizontalAlignment="Left" Margin="484,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.618,0.51"/>
+        <Image HorizontalAlignment="Left" Height="82" Margin="38,51,0,0" VerticalAlignment="Top" Width="114" Source="Asset/Cookies.jpg" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="86" Margin="38,147,0,0" VerticalAlignment="Top" Width="115" Source="Asset/Matcha.jpg" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="91" Margin="38,347,0,0" VerticalAlignment="Top" Width="114" Source="Asset/Brown.jpg" Stretch="UniformToFill"/>
+        <Image HorizontalAlignment="Left" Height="85" Margin="38,247,0,0" VerticalAlignment="Top" Width="114" Source="Asset/Brown_Milk.jpg" Stretch="UniformToFill"/>
+        <Button x:Name="Name_Copy" Content="Back" HorizontalAlignment="Left" Margin="490,354,0,0" VerticalAlignment="Top" Width="104" Height="35" BorderThickness="2" FontWeight="Bold"
+            Background="White" Foreground="#FFFF5E1A" FontFamily="Mulish" FontSize="20"  Style="{DynamicResource ButtonRounded}" Click="Back_Click" BorderBrush="#FFFF5E1A"/>
+        <Button x:Name="Name_Copy1" Content="  Apply &#xD;&#xA;Voucher" HorizontalAlignment="Left" Margin="236,491,0,0" VerticalAlignment="Top" Width="47" Height="24"
+            Background="#FF28C700" Foreground="White" FontFamily="arial" FontSize="8" Style="{DynamicResource ButtonRounded}" Click="Name_Click" FontWeight="Bold" BorderBrush="#FF28C700"/>
+        <Label Content="Topping: -&#xD;&#xA;Sugar level: Normal&#xD;&#xA;Ice level: Extra" HorizontalAlignment="Left" Margin="198,72,0,0" VerticalAlignment="Top" Width="179" FontSize="8" FontFamily="Mulish"/>
+        <Label Content="Cookies dan Cream Boba Milk" HorizontalAlignment="Left" Margin="198,51,0,0" VerticalAlignment="Top" Height="21" Width="179" FontWeight="Bold" FontFamily="Mulish" FontSize="11"/>
+        <Label Content="Rp 13.000" HorizontalAlignment="Left" Margin="198,114,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.531,1.609" Foreground="#FFFF5E1A" FontWeight="Bold" FontFamily="Mulish" FontSize="10"/>
+        <Label Content="Topping: Egg Pudding&#xA;Sugar level: Normal&#xA;Ice level: Extra" HorizontalAlignment="Left" Margin="198,171,0,0" VerticalAlignment="Top" Width="179" FontSize="8" FontFamily="Mulish"/>
+        <Label Content="Premium Matcha Boba Milk" HorizontalAlignment="Left" Margin="198,147,0,0" VerticalAlignment="Top" Height="auto" Width="179" FontFamily="Mulish" FontWeight="Bold" FontSize="11"/>
+        <Label Content="Rp 32.000" HorizontalAlignment="Left" Margin="197,211,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.531,1.609" Foreground="#FFFF5E1A" FontWeight="Bold" FontFamily="Mulish" FontSize="10"/>
+        <Label Content="Topping: -&#xA;Sugar level: Normal&#xA;Ice level: Extra" HorizontalAlignment="Left" Margin="198,269,0,0" VerticalAlignment="Top" Width="164" FontSize="8"/>
+        <Label Content="Brown Sugar Boba Milk Tea" HorizontalAlignment="Left" Margin="198,247,0,0" VerticalAlignment="Top" Width="179" FontWeight="Bold" FontSize="11" FontFamily="Mulish"/>
+        <Label Content="Rp 13.000" HorizontalAlignment="Left" Margin="198,311,0,0" VerticalAlignment="Top" Width="96" RenderTransformOrigin="0.531,1.609" Foreground="#FFFF5E1A" FontWeight="Bold" Height="21" FontFamily="Mulish" FontSize="10"/>
+        <Label Content="Topping: -&#xA;Sugar level: Normal&#xA;Ice level: Normal" HorizontalAlignment="Left" Margin="198,372,0,0" VerticalAlignment="Top" Width="164" FontSize="8"/>
+        <Label Content="Brown Sugar Boba Milk" HorizontalAlignment="Left" Margin="198,347,0,0" VerticalAlignment="Top" Width="179" FontWeight="Bold" FontSize="11" FontFamily="Mulish"/>
+        <Label Content="Rp 13.000" HorizontalAlignment="Left" Margin="198,415,0,0" VerticalAlignment="Top" Height="23" Width="96" RenderTransformOrigin="0.531,1.609" Foreground="#FFFF5E1A" FontWeight="Bold" FontSize="10"/>
+        <Image HorizontalAlignment="Left" Height="11" Margin="504,265,0,0" VerticalAlignment="Top" Width="23" Source="Asset/dana.png"/>
+        <Image HorizontalAlignment="Left" Margin="504,286,0,0" VerticalAlignment="Top" Width="23" Source="Asset/linkaja.png" Height="8"/>
+        <Image HorizontalAlignment="Left" Margin="504,276,0,0" VerticalAlignment="Top" Width="23" Source="Asset/ovo.png" Height="8"/>
+        <Image HorizontalAlignment="Left" Height="15" Margin="504,240,0,0" VerticalAlignment="Top" Width="19" Source="Asset/spay.png" RenderTransformOrigin="0.604,0.538" Stretch="Fill"/>
+        <Label Content="Shopepay" HorizontalAlignment="Left" Margin="531,236,0,0" VerticalAlignment="Top" Width="55" FontSize="8" FontFamily="Mulish" FontWeight="DemiBold"/>
+        <Label Content="Gopay" HorizontalAlignment="Left" Margin="532,247,0,0" VerticalAlignment="Top" FontSize="8" FontFamily="Mulish" FontWeight="DemiBold"/>
+        <Label Content="Dana" HorizontalAlignment="Left" Margin="532,258,0,0" VerticalAlignment="Top" FontSize="8" FontFamily="Mulish" FontWeight="DemiBold"/>
+        <Label Content="Ovo" HorizontalAlignment="Left" Margin="532,269,0,0" VerticalAlignment="Top" FontSize="8" FontFamily="Mulish" FontWeight="DemiBold"/>
+        <Label Content="Linkaja" HorizontalAlignment="Left" Margin="532,280,0,0" VerticalAlignment="Top" FontSize="8" FontFamily="Mulish" FontWeight="DemiBold"/>
+        <Image HorizontalAlignment="Left" Height="9" Margin="504,256,0,0" VerticalAlignment="Top" Width="27" Source="Asset/gopay.png"/>
+        <Label Content="+ Rp 4.000" HorizontalAlignment="Left" Margin="268,211,0,0" VerticalAlignment="Top" Foreground="#FF28C700" Width="72" FontSize="10" FontFamily="Mulish"/>
+
+    </Grid>
+</Window>

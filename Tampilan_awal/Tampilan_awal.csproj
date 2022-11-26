@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Layer_3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,6 +73,9 @@
     </Compile>
     <Compile Include="Layer_2.xaml.cs">
       <DependentUpon>Layer_2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layer_3.xaml.cs">
+      <DependentUpon>Layer_3.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -103,31 +110,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Asset\Banner.png" />
-    <Resource Include="Asset\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Menu fav.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Brown.jpg" />
-    <Resource Include="Asset\Cookies.jpg" />
-    <Resource Include="Asset\Latte.jpg" />
-    <Resource Include="Asset\Matcha.jpg" />
-    <Resource Include="Asset\oreo.jpg" />
-    <Resource Include="Asset\Taro.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\Brown_Milk.jpg" />
-    <Resource Include="Asset\Manggo.jpg" />
-    <Resource Include="Asset\Orange.jpg" />
-    <Resource Include="Asset\strawberry.jpg" />
-    <Resource Include="Asset\velvet.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Asset\coco.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="AssetFrame\AvocadoChoco.png" />
     <Resource Include="AssetFrame\BlackTea.png" />
     <Resource Include="AssetFrame\Brownsugar.png" />
@@ -147,6 +129,38 @@
     <Resource Include="AssetFrame\StrawberryCreamy.png" />
     <Resource Include="AssetFrame\Taro.png" />
     <Resource Include="AssetFrame\ThaiTea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Asset\Banner.png" />
+    <Resource Include="Asset\Brown.jpg" />
+    <Resource Include="Asset\Brown_Milk.jpg" />
+    <Resource Include="Asset\coco.jpg" />
+    <Resource Include="Asset\Cookies.jpg" />
+    <Resource Include="Asset\dana.png" />
+    <Resource Include="Asset\Frame 210.png" />
+    <Resource Include="Asset\Frame 212.png" />
+    <Resource Include="Asset\Frame 213.png" />
+    <Resource Include="Asset\Frame 214.png" />
+    <Resource Include="Asset\Frame 220.png" />
+    <Resource Include="Asset\Frame 221.png" />
+    <Resource Include="Asset\Frame 223.png" />
+    <Resource Include="Asset\Frame 224.png" />
+    <Resource Include="Asset\gopay.png" />
+    <Resource Include="Asset\Latte.jpg" />
+    <Resource Include="Asset\linkaja.png" />
+    <Resource Include="Asset\Logo.png" />
+    <Resource Include="Asset\Manggo.jpg" />
+    <Resource Include="Asset\Matcha.jpg" />
+    <Resource Include="Asset\Menu fav.png" />
+    <Resource Include="Asset\Orange.jpg" />
+    <Resource Include="Asset\oreo.jpg" />
+    <Resource Include="Asset\ovo.png" />
+    <Resource Include="Asset\spay.png" />
+    <Resource Include="Asset\strawberry.jpg" />
+    <Resource Include="Asset\Taro.jpg" />
+    <Resource Include="Asset\Vector %281%29.png" />
+    <Resource Include="Asset\Vector.png" />
+    <Resource Include="Asset\velvet.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
